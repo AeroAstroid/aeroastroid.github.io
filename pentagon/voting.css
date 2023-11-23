@@ -1,5 +1,5 @@
 :root {
-    background: #001040;
+    background: linear-gradient(to left, #001040, #002070);
 }
 
 body {
@@ -17,4 +17,8 @@ th.letter {
 th.response {
     text-align: left;
     font-size: 18px;
+}
+
+a {
+    color: #aabbff;
 }
