@@ -1,0 +1,76 @@
+body {
+	background: rgb(0, 0, 16);
+	color: black;
+
+	position: fixed;
+    width: 100%;
+}
+
+:root {
+	--proper_easing: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	--font: Consolas;
+	
+	--def_color: #000010;
+
+	--shadow: 2px;
+}
+
+text {
+	/* SIZE AND POSITION */
+	position: absolute;
+
+	left: var(--x);
+	top: var(--y);
+
+	width: var(--w);
+	height: var(--h);
+
+	transform: translateX(-50%) translateY(-50%);
+
+	/* FONT */
+	color: #ccccdd;
+	font-family: var(--font);
+	text-align: center;
+    font-size: var(--size);
+}
+
+.xcentered {
+	left: 50vw;
+}
+
+.ycentered {
+	top: 50vh;
+}
+
+.shadowed {
+    color: var(--def_color);
+    text-shadow: var(--shadow) var(--shadow) #ccccdd;
+}
+
+.outlined
+{
+    color: var(--def_color);
+    text-shadow:
+    calc(-1 * var(--shadow)) calc(-1 * var(--shadow)) 0 #ccccdd,
+    var(--shadow) calc(-1 * var(--shadow)) 0 #ccccdd,
+    calc(-1 * var(--shadow)) var(--shadow) 0 #ccccdd,
+    var(--shadow) var(--shadow) 0 #ccccdd,
+
+	calc(-1 * var(--shadow)) 0 0 #ccccdd,
+    0 calc(-1 * var(--shadow)) 0 #ccccdd,
+    0 var(--shadow) 0 #ccccdd,
+    var(--shadow) 0 0 #ccccdd;  
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.front {
+	z-index: 1;
+}
