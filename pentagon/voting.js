@@ -14,7 +14,7 @@ if (screen != null) {
 
         for (e = 0; e < selected_entries.length; e++) {
             let entry_n = parseInt(selected_entries[e]) - 1;
-            let div_code = "<tr><th class='letter'>" + alphabet[e] + "</th><th>" + entry_list[entry_n] + "</th></tr>"
+            let div_code = "<tr><th class='letter'>" + alphabet[e] + "</th><th class='response'>" + entry_list[entry_n] + "</th></tr>"
             document.getElementById("screen").innerHTML += div_code;
         }
     })
