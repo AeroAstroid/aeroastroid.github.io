@@ -11,7 +11,7 @@ if (screen != null) {
     fetch('entries.txt')
     .then(r => r.text())
     .then(text => {
-        entry_list = text.split("\r\n");
+        entry_list = text.split("\n");
 
         console.log(entry_list);
         for (e = 0; e < selected_entries.length; e++) {
