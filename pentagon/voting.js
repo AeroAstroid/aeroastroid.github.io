@@ -10,10 +10,8 @@ if (screen != null) {
     fetch('entries.txt')
     .then(r => r.text())
     .then(text => {
-        console.log(text);
         entry_list = text.split("\n");
-        console.log(entry_list);
-        
+
         for (e = 0; e < selected_entries.length; e++) {
             let entry_n = parseInt(selected_entries[e]) - 1;
             let div_code = "<tr><th class='letter'>" + alphabet[e] + "</th><th>" + entry_list[entry_n] + "</th></tr>"
