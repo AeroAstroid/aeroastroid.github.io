@@ -11,12 +11,22 @@ body {
 th.letter {
     text-align: center;
     font-size: 28px;
-    padding: 6px 25px 6px 10px;
+    background-color: #0006;
+  
+    display: block;
+    margin: 4px 10px 4px 0px;
+    padding: 6px 15px 6px 15px;
 }
 
 th.response {
     text-align: left;
     font-size: 18px;
+    
+    margin: 4px 10px 4px 0px;
+    padding: 0px 10px 0px 10px;
+    background-image: linear-gradient(to left, #0000, #0006);
+
+    width: 100vw;
 }
 
 a {
