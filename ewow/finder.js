@@ -67,7 +67,7 @@ function search() {
             return;
         }
 
-        status.textContent = "Here are a few screens that match your search terms:";
+        status.textContent = "Here are a few screens that match your search terms! (max. 5 screens)";
 
         for (n = 0; n < Math.min(5, key_list.length); n++) {
             let img = document.getElementById("i"+n);
