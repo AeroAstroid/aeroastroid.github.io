@@ -1,7 +1,17 @@
+let episode = "1A";
+let start = [8, 57];
+let frames_per = 5;
+
 window.onkeydown = function(event) {  
     if(event.key === "Enter") {  
         search();
     }
+}
+
+window.onload = function() {
+    let ep_text = document.getElementById("episode");
+
+    ep_text.textContent = "EWOW " + episode;
 }
 
 function hasClass(ele,cls) {
@@ -49,7 +59,10 @@ function search() {
     addClass(imgs, "nodisplay");
 
     let status = document.getElementById("status");
+    let h_status = document.getElementById("h");
+
     status.textContent = "Searching responses... this may take a few seconds."
+    h_status.textContent = ""
 
     let API = "https://script.google.com/macros/s/AKfycbyUltTGnXHq4S3agYcf5MW01Cv0QxBXxPXbs5zcxbmQhtVM3N6n7lgqAZ8gzgRw9G0/exec"
 
@@ -68,11 +81,23 @@ function search() {
         }
 
         status.textContent = "Here are a few screens that match your search terms! (max. 5 screens)";
+        h_status.textContent = "Hover over a screen to see its corresponding video timestamp!";
 
         for (n = 0; n < Math.min(5, key_list.length); n++) {
             let img = document.getElementById("i"+n);
 
             img.src = "images/" + key_list[n].toString() + ".jpg";
+
+            let total_seconds = Math.floor(start[0]*60 + start[1] + 1.00483 * key_list[n] * frames_per / 30);
+            
+            let min = Math.floor(total_seconds / 60);
+            let sec = total_seconds % 60;
+
+            if (sec.toString().length == 1) {
+                sec = "0" + sec.toString();
+            }
+
+            img.title = "Approximate video timestamp: " + min + ":" + sec;
         }
         
         removeClass(button, "searching");
