@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>EWOW Response Finder</title>
+<script src="finder.js"></script>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body id="home">
+<h1>EWOW Response Finder</h1>
+<h3>made by Dark a.k.a. AeroAstroid</h3>
+<h4><i>up to date as of <span style="color:#ffbbaa">EWOW 1A</span>!</i></h4>
+<br>
+
+<h3>This page automatically locates voting screens that match a given search term.</h3>
+
+<p><i>NOTE: The response recognition isn't perfect, so if the finder can't locate your response,<br>
+try searching for individual words or phrases instead of the full response, as it may have been<br>
+transcribed slightly differently than what you submitted!</i></p>
+
+<br>
+
+<p>To guarantee fairness, all screens shown are taken directly from EWOW and are not modified in any way.<br>
+The full, raw data of all responses and keywords is kept private to prevent results cracking.</p>
+
+<br><br>
+<input id="i" type="text" oninput="updateButton()" placeholder="Write part of your response here!">
+<br><br>
+<button id="s" class="disabled" onclick="search()">Search!</button>
+<br><br>
+<h2 id="status"></h2>
+<br>
+<div class="nodisplay" id="images">
+    <img id="i0" src=""><br><br>
+    <img id="i1" src=""><br><br>
+    <img id="i2" src=""><br><br>
+    <img id="i3" src=""><br><br>
+    <img id="i4" src="">
+</div>
+</body>
+</html>
