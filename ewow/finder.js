@@ -68,7 +68,8 @@ function search() {
 
             img.src = "images/" + key_list[n].toString() + ".jpg";
         }
-
+        
+        removeClass(button, "searching");
         removeClass(imgs, "nodisplay");
     })
     .catch((error) => {
