@@ -1,3 +1,9 @@
+window.onkeydown = function(event) {  
+    if(event.key === "Enter") {  
+        search();
+    }
+}
+
 function hasClass(ele,cls) {
 return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
 }
