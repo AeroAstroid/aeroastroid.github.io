@@ -62,3 +62,9 @@ button {
 p {
     color: #aabbff90;
 }
+
+a {
+    background: linear-gradient(to right, #78B4EC, #A3F69F);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
