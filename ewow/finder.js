@@ -66,7 +66,14 @@ function search() {
 
     let API = "https://script.google.com/macros/s/AKfycbyUltTGnXHq4S3agYcf5MW01Cv0QxBXxPXbs5zcxbmQhtVM3N6n7lgqAZ8gzgRw9G0/exec"
 
-    fetch(API + "?key=" + encodeURI(key))
+    fetch(API + "?key=" + encodeURI(key), 
+    {
+        redirect: "follow",
+        method: "GET",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+        }
+    })
     .then(function(value) {
         return value.text();
     })
