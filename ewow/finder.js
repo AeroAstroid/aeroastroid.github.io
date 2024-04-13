@@ -1,5 +1,5 @@
-let episode = "1A";
-let start = [8, 57];
+let episode = "2A";
+let start = [7, 8];
 let frames_per = 5;
 
 window.onkeydown = function(event) {  
