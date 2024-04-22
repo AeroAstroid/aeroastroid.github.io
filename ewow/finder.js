@@ -87,8 +87,6 @@ function search() {
 
         let key_list = JSON.parse(text);
 
-        console.log(key_list);
-
         if (!key_list.length) {
             status.textContent = "No responses were found!";
             removeClass(button, "searching");
@@ -98,29 +96,33 @@ function search() {
         status.textContent = "Here are a few screens that match your search terms! (max. 5 screens)";
         h_status.textContent = "Hover over a screen to see its corresponding video timestamp!";
 
-        for (n = 0; n < Math.min(5, key_list.length); n++) {
+        for (n = 0; n < Math.max(5, key_list.length); n++) {
             let img = document.getElementById("i"+n);
 
-            console.log(key_list.length);
-            img.src = "images/" + key_list[n][0].toString() + ".jpg";
+            if (n < key_list.length) {
+                removeClass(img, "nodisplay");
+                img.src = "images/" + key_list[n][0].toString() + ".jpg";
 
-            let total_seconds = Math.floor(start[0]*60 + start[1] + 1.00483 * key_list[n][0] * frames_per / 30);
-            
-            let min = Math.floor(total_seconds / 60);
-            let sec = total_seconds % 60;
+                let total_seconds = Math.floor(start[0]*60 + start[1] + 1.00483 * key_list[n][0] * frames_per / 30);
+                
+                let min = Math.floor(total_seconds / 60);
+                let sec = total_seconds % 60;
 
-            if (sec.toString().length == 1) {
-                sec = "0" + sec.toString();
-            }
+                if (sec.toString().length == 1) {
+                    sec = "0" + sec.toString();
+                }
 
-            img.title = "Approximate video timestamp: " + min + ":" + sec;
+                img.title = "Approximate video timestamp: " + min + ":" + sec;   
 
-            console.log(key_list[n][1]);
-            for (r = 0; r < key_list[n][1].length; r++) {
-                let r_index = key_list[n][1][r];
+                for (r = 0; r < key_list[n][1].length; r++) {
+                    let r_index = key_list[n][1][r];
+    
+                    img.insertAdjacentHTML("afterend",
+                    '<img id="high_'+n+'_'+r+'" src="highlighter.png" class="highlight" style="bottom: '+(37+34.5*(11-r_index))+'px;">');
+                }
 
-                img.insertAdjacentHTML("afterend",
-                '<img id="high_'+n+'_'+r+'" src="highlighter.png" class="highlight" style="bottom: '+(37+34.5*(11-r_index))+'px;">');
+            } else {
+                addClass(img, "nodisplay");
             }
         }
         
