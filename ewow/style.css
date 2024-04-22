@@ -59,11 +59,23 @@ button {
     display: none;
 }
 
+.imgcontain {
+    position: relative;
+    display: inline;
+}
+
+.highlight {
+    position: absolute;
+    left: 0px;
+    bottom: 350px;
+    mix-blend-mode: multiply;
+}
+
 p {
     color: #aabbff90;
 }
 
-a {
+.tc {
     background: linear-gradient(to right, #78B4EC, #A3F69F);
     background-clip: text;
     -webkit-text-fill-color: transparent;

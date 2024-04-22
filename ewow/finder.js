@@ -64,7 +64,13 @@ function search() {
     status.textContent = "Searching responses... this may take a few seconds."
     h_status.textContent = ""
 
-    let API = "https://script.google.com/macros/s/AKfycbyUltTGnXHq4S3agYcf5MW01Cv0QxBXxPXbs5zcxbmQhtVM3N6n7lgqAZ8gzgRw9G0/exec"
+    let highlighters = document.querySelectorAll('[id^="high_"]');
+
+    for (h = 0; h < highlighters.length; h++) {
+        highlighters[h].remove();
+    }
+
+    let API = "https://script.google.com/macros/s/AKfycbyzlUz28TuWmYgf8vMG74qbBrpWsQmFXAcKp7dB3SWalcnOBeMHKYxPFdqfh0hJOqo/exec"
 
     fetch(API + "?key=" + encodeURI(key), 
     {
@@ -81,6 +87,8 @@ function search() {
 
         let key_list = JSON.parse(text);
 
+        console.log(key_list);
+
         if (!key_list.length) {
             status.textContent = "No responses were found!";
             removeClass(button, "searching");
@@ -93,9 +101,10 @@ function search() {
         for (n = 0; n < Math.min(5, key_list.length); n++) {
             let img = document.getElementById("i"+n);
 
-            img.src = "images/" + key_list[n].toString() + ".jpg";
+            console.log(key_list.length);
+            img.src = "images/" + key_list[n][0].toString() + ".jpg";
 
-            let total_seconds = Math.floor(start[0]*60 + start[1] + 1.00483 * key_list[n] * frames_per / 30);
+            let total_seconds = Math.floor(start[0]*60 + start[1] + 1.00483 * key_list[n][0] * frames_per / 30);
             
             let min = Math.floor(total_seconds / 60);
             let sec = total_seconds % 60;
@@ -105,6 +114,14 @@ function search() {
             }
 
             img.title = "Approximate video timestamp: " + min + ":" + sec;
+
+            console.log(key_list[n][1]);
+            for (r = 0; r < key_list[n][1].length; r++) {
+                let r_index = key_list[n][1][r];
+
+                img.insertAdjacentHTML("afterend",
+                '<img id="high_'+n+'_'+r+'" src="highlighter.png" class="highlight" style="bottom: '+(37+34.5*(11-r_index))+'px;">');
+            }
         }
         
         removeClass(button, "searching");

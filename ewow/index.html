@@ -12,21 +12,18 @@
 </head>
 <body id="home">
 <h1>EWOW Response Finder</h1>
-<h3>made by Dark a.k.a. AeroAstroid, brought to you by <a target="_blank" href="https://discord.gg/twow">TWOW Central</a></h3>
+<h3>made by Dark a.k.a. AeroAstroid, brought to you by <a target="_blank" class="tc" href="https://discord.gg/twow">TWOW Central</a></h3>
 <h4><i>with data contributions from losered and qooyuni</i></h4>
 <h4><i>up to date as of <span id="episode" style="color:#ffbbaa">EWOW ??</span>!</i></h4>
 <br>
 
 <h3>This page automatically locates voting screens that match a given search term.</h3>
 
-<p><i>NOTE: The response recognition isn't perfect, so if the finder can't locate your response,<br>
-try searching for individual words or phrases instead of the full response, as it may have been<br>
-transcribed slightly differently than what you submitted!</i></p>
-
-<br>
-
-<p>To guarantee fairness, all screens shown are taken directly from EWOW and are not modified in any way.<br>
-The full, raw data of all responses and keywords is kept private to prevent results cracking.</p>
+<p>
+The screens shown are taken directly from EWOW.<br>
+Responses that match the given search term are highlighted.<br><br>
+The full, raw data of all responses and keywords is kept private to prevent results cracking.
+</p>
 
 <br><br>
 <input id="i" type="text" oninput="updateButton()" placeholder="Write part of your response here!">
@@ -37,11 +34,33 @@ The full, raw data of all responses and keywords is kept private to prevent resu
 <h4 id="h"></h4>
 <br>
 <div class="nodisplay" id="images">
-    <img id="i0" src=""><br><br>
-    <img id="i1" src=""><br><br>
-    <img id="i2" src=""><br><br>
-    <img id="i3" src=""><br><br>
-    <img id="i4" src="">
+    <div class="imgcontain" id="d0">
+        <img id="i0" src="">
+    </div>
+
+    <br><br>
+
+    <div class="imgcontain" id="d1">
+        <img id="i1" src="">
+    </div>
+
+    <br><br>
+
+    <div class="imgcontain" id="d2">
+        <img id="i2" src="">
+    </div>
+
+    <br><br>
+
+    <div class="imgcontain" id="d3">
+        <img id="i3" src="">
+    </div>
+
+    <br><br>
+
+    <div class="imgcontain" id="d4">
+        <img id="i4" src="">
+    </div>
 </div>
 </body>
 </html>
