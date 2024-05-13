@@ -70,7 +70,7 @@ function search() {
         highlighters[h].remove();
     }
 
-    let API = "https://script.google.com/macros/s/AKfycbyzlUz28TuWmYgf8vMG74qbBrpWsQmFXAcKp7dB3SWalcnOBeMHKYxPFdqfh0hJOqo/exec"
+    let API = "https://script.google.com/macros/s/AKfycbyxP5xCOMO9YPR5ylhabzW8-C2NWmXGkiBsXlpZhTvU8OtnNAb44SHAC63Zw8C-NTM/exec"
 
     fetch(API + "?key=" + encodeURI(key), 
     {
@@ -118,7 +118,7 @@ function search() {
                     let r_index = key_list[n][1][r];
     
                     img.insertAdjacentHTML("afterend",
-                    '<img id="high_'+n+'_'+r+'" src="highlighter.png" class="highlight" style="bottom: '+(37+34.5*(11-r_index))+'px;">');
+                    '<img id="high_'+n+'_'+r+'" src="highlighter.png" class="highlight" style="bottom: '+(38+34*(11-r_index))+'px;">');
                 }
 
             } else {
