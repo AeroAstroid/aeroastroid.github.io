@@ -101,7 +101,7 @@ function search() {
 
             if (n < key_list.length) {
                 removeClass(img, "nodisplay");
-                img.src = "images/" + key_list[n][0].toString() + ".jpg";
+                img.src = "images/" + key_list[n][0].toString() + ".png";
 
                 let total_seconds = Math.floor(start[0]*60 + start[1] + 1.00483 * key_list[n][0] * frames_per / 30);
                 
