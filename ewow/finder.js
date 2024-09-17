@@ -1,5 +1,5 @@
-let episode = "6A";
-let start = [5, 31];
+let episode = "7A";
+let start = [4, 10];
 let frames_per = 5;
 
 window.onkeydown = function(event) {  
@@ -103,7 +103,7 @@ function search() {
                 removeClass(img, "nodisplay");
                 img.src = "images/" + key_list[n][0].toString() + ".jpg";
 
-                let total_seconds = Math.floor(start[0]*60 + start[1] + 1.00483 * key_list[n][0] * frames_per / 30);
+                let total_seconds = Math.floor(start[0]*60 + start[1] + key_list[n][0] * frames_per / 30);
                 
                 let min = Math.floor(total_seconds / 60);
                 let sec = total_seconds % 60;
