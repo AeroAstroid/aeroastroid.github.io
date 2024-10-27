@@ -1,5 +1,5 @@
-let episode = "7A";
-let start = [4, 10];
+let episode = "9A";
+let start = [11, 57];
 let frames_per = 5;
 
 window.onkeydown = function(event) {  
@@ -118,7 +118,7 @@ function search() {
                     let r_index = key_list[n][1][r];
     
                     img.insertAdjacentHTML("afterend",
-                    '<img id="high_'+n+'_'+r+'" src="highlighter.png" class="highlight" style="bottom: '+(38+34*(11-r_index))+'px;">');
+                    '<img id="high_'+n+'_'+r+'" src="highlighter.png" class="highlight" style="bottom: '+(43+34*(11-r_index))+'px;">');
                 }
 
             } else {
