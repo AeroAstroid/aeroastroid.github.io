@@ -70,7 +70,7 @@ function search() {
         highlighters[h].remove();
     }
 
-    let API = "https://script.google.com/macros/s/AKfycbyxP5xCOMO9YPR5ylhabzW8-C2NWmXGkiBsXlpZhTvU8OtnNAb44SHAC63Zw8C-NTM/exec"
+    let API = "https://script.google.com/macros/s/AKfycbyqjMhH7s-lyJopM6TUXyozmeIvwzoHPEAWTEtnoiRB5lztCyxw-B04hOu-wdgcHNY/exec"
 
     fetch(API + "?key=" + encodeURI(key), 
     {
@@ -93,10 +93,10 @@ function search() {
             return;
         }
 
-        status.textContent = "Here are a few screens that match your search terms! (max. 5 screens)";
+        status.textContent = "Here are a few screens that match your search terms! (max. 11 screens)";
         h_status.textContent = "Hover over a screen to see its corresponding video timestamp!";
 
-        for (n = 0; n < Math.max(5, key_list.length); n++) {
+        for (n = 0; n < Math.max(11, key_list.length); n++) {
             let img = document.getElementById("i"+n);
 
             if (n < key_list.length) {
