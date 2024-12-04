@@ -17,6 +17,15 @@ h3 {
     font-size: 18px;
 }
 
+img {
+    border: 5px solid #aabbff;
+    border-radius: 5px;
+}
+
+.highlight {
+    border: none;
+}
+
 input {
     background-color: #00000040;
     font-family: "Roboto";
