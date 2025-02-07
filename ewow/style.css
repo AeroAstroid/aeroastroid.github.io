@@ -89,3 +89,9 @@ p {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.ez {
+    background: linear-gradient(to right, hsl(261, 100%, 77%), #ffe696);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
