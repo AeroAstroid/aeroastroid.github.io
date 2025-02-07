@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 let episode = "11A";
 let start = [12, 46];
-=======
-let episode = "10A";
-let start = [15, 3];
->>>>>>> c465f37cd89073ad9605fe4527854d4c9785260c
 let frames_per = 5;
 
 window.onkeydown = function(event) {  
