@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 converter.py
 Raw.txt
+=======
+images.py
+entries.py
+screens.txt
+>>>>>>> c465f37cd89073ad9605fe4527854d4c9785260c
 votingImages/
