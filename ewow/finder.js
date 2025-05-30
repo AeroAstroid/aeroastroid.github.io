@@ -1,6 +1,6 @@
 let episode = "13A";
-let start = [12, 7];
-let frames_per = 5;
+let start = [9, 27];
+let frames_per = 4;
 
 window.onkeydown = function(event) {  
     if(event.key === "Enter") {  
