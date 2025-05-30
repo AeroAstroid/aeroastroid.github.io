@@ -1,5 +1,5 @@
 let episode = "13A";
-let start = [9, 27];
+let start = [10, 27];
 let frames_per = 4;
 
 window.onkeydown = function(event) {  
@@ -94,7 +94,7 @@ function search() {
         }
 
         status.textContent = "Here are a few screens that match your search terms! (max. 11 screens)";
-        h_status.textContent = "Hover over a screen to see its corresponding video timestamp!";
+        //h_status.textContent = "Hover over a screen to see its corresponding video timestamp!";
 
         for (n = 0; n < Math.max(11, key_list.length); n++) {
             let img = document.getElementById("i"+n);
@@ -112,7 +112,7 @@ function search() {
                     sec = "0" + sec.toString();
                 }
 
-                img.title = "Approximate video timestamp: " + min + ":" + sec;   
+                //img.title = "Approximate video timestamp: " + min + ":" + sec;   
 
                 for (r = 0; r < key_list[n][1].length; r++) {
                     let r_index = key_list[n][1][r];
